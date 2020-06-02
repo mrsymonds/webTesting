@@ -1,0 +1,176 @@
+/*
+Color scheme for this website:
+	#4312AE
+	#472B83
+	#280671
+	#7446D7
+	#8E6DD7
+
+Unit 4 > Module 4 > Lesson 3
+
+Added a background-image to the body
+This background image is 1px wide and 400px high
+It was filled with a gradient ranging from black at the top
+to #8E6DD7 at the bottom (same as the background-color)
+When tiled horizontally, this creates a nice, subtle visual effect
+that uses very little bandwidth
+*/
+body {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	background-color: #8E6DD7;
+	/* note that URL is relative from the CSS file, NOT the HTML file */
+	background-image: url('../images/gradient.jpg');
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	width: 70%;
+	min-width: 720px;
+	margin: 0 auto;
+}
+h1, h2, h3 {
+	font-family: Palatino, Georgia, serif;
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.8em;
+	text-align: center;
+	text-shadow: 4px 4px 4px black;
+	margin-bottom: 0.75em;
+}
+h2 {
+	font-size: 1.4em;
+	margin-left: 1em;
+}
+h3 {
+	font-size: 1.1em;
+	margin-left: 1.25em;
+}
+div {
+	border: 1px solid black;
+	padding: 1em;
+	margin: 1em;
+	background-color: #4312AE;
+	box-shadow: 4px 4px 4px black;
+}
+p {
+	margin: 1em;
+}
+a {
+	color: #4312AE;
+}
+a:hover, a:focus {
+	color: black !important;
+	background-color: #FFFFCC; /* yellow */
+}
+
+/* table styles */
+/* for accessibility.html */
+
+table {
+	margin: 0 auto; /* this is a trick for centering certain elements */
+	background-color: black;
+}
+th, td {
+	background-color: white;
+	color: black;
+	padding: 0.75em;
+	margin: 1px;
+}
+caption {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 0.75em;
+}
+
+/* elements with ids and classes */
+
+div#banner {
+	text-align: center;
+	margin-top: 5em; /* make room for skipnav */
+	margin-left: auto; /* center horizontally */
+	margin-right: auto; /* center horizontally */
+	margin-bottom: 2em;
+	padding: 4px 2px 0;
+	height: 104px; /* only slightly higher than the img it contains */
+	width: 704px;
+}
+div#main div {
+	/* override block effects on divs inside the main body */
+	border: none;
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	box-shadow: none;
+}
+div#skipnav {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 10em;
+	text-align: center;
+	margin: 0;
+}
+div#skipnav a, div.info a {
+	color: white;
+}
+div.info {
+  float: left;
+	width: 40%;
+	font-size: 1.2em;
+}
+div#navigation {
+	clear: left;
+}
+div#main, div#main p {
+	color: black;
+	background-color: white;
+	font-style: normal;
+}
+div#main p {
+	margin-left: 2em;
+}
+div#main p#overview {
+	/* cancel out the above style for the #overview */
+	margin-left: 1em;
+	font-size: 1.1em;
+}
+div#main p.temp {
+	font-style: italic;
+}
+p#overview:first-letter {
+	font-family: "Lucida Calligraphy","Monotype Corsiva",cursive;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+/* Navigation menu styles */
+div#navigation {
+	padding-bottom: 0.25em;
+}
+div#navigation ul {
+	list-style-type: none;
+	padding-bottom: inherit;
+}
+div#navigation ul li {
+	float: left;
+	margin-right: 0.5em;
+}
+div#navigation ul li a {
+	padding: 0.25em 1em;
+	text-decoration: none; /* no underline */
+	background-color: #EBF5FF; /* pale bluish white */
+	color: #4312AE; /* dark blue */
+	border: 2px solid black;
+	border-top-left-radius: 1em 1em; /* rounded corner! */
+	border-top-right-radius: 1em 1em; /* another rounded corner! */
+}
+div#navigation ul li a:hover, div#navigation ul li a:focus {
+	color: black;
+	background-color: white;
+	font-weight: bold;
+}
+div#main {
+	clear: left;
+}
